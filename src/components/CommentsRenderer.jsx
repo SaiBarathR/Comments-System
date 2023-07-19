@@ -14,7 +14,7 @@ export default function CommentsRenderer({ handleInsertNode, handleEditNode, han
     }, [editMode]);
 
     const handleNewComment = () => {
-        setExpandChidReplies(!expandChidReplies);
+        setExpandChidReplies((prev) => !prev);
         displayComment(true);
     };
 
@@ -84,7 +84,7 @@ export default function CommentsRenderer({ handleInsertNode, handleEditNode, han
                                             <Arrow />
                                         )}{" "}
                                         Reply
-                                    </div>, type: 'positive', onClick: handleNewComment,
+                                    </div>, type: 'positive', onClick: expandChidReplies ? handleClickCancel : handleNewComment,
                                 },
                                 { children: "Edit", type: "positive", onClick: () => setEditMode(true) },
                                 { children: "Delete", type: "negative", onClick: handleDelete, }]}
