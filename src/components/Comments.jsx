@@ -5,7 +5,6 @@ import CommentsRenderer from "./CommentsRenderer";
 export default function Comments() {
 
     const [commentsData, setCommentsData] = useState({ id: 1, items: [], });
-
     const { insertNode, editNode, deleteNode } = useTreeStructureProvider();
 
     const handleInsertNode = (folderId, item) => {
@@ -26,6 +25,7 @@ export default function Comments() {
 
     return (
         <div className="flex flex-col gap-6">
+            <label className="text-left font-semibold text-4xl">Comment Widget</label>
             <CommentsRenderer
                 handleInsertNode={handleInsertNode}
                 handleEditNode={handleEditNode}
