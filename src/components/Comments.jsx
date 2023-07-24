@@ -15,7 +15,6 @@ export default function Comments() {
 
     function handleReload() {
         localStorage.setItem('comments', JSON.stringify(commentsData));
-        console.log(commentsData, "in");
     }
 
     window.addEventListener("beforeunload", handleReload);
