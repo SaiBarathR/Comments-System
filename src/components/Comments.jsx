@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useTreeStructureProvider from "../customHooks/treeStructureProvider";
 import CommentsRenderer from "./CommentsRenderer";
 
@@ -6,6 +6,19 @@ export default function Comments() {
 
     const [commentsData, setCommentsData] = useState({ id: 1, items: [], });
     const { insertNode, editNode, deleteNode } = useTreeStructureProvider();
+
+    useEffect(() => {
+        const comments = JSON.parse(localStorage.getItem('comments')) || {}
+        comments.id && setCommentsData(comments)
+        comments.id && localStorage.clear();
+    }, [])
+
+    function handleReload() {
+        localStorage.setItem('comments', JSON.stringify(commentsData));
+        console.log(commentsData, "in");
+    }
+
+    window.addEventListener("beforeunload", handleReload);
 
     const handleInsertNode = (folderId, item) => {
         const finalStructure = insertNode(commentsData, folderId, item);
