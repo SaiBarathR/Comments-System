@@ -79,12 +79,9 @@ export default function CommentsRenderer({ handleInsertNode, handleEditNode, han
                             : (<div className="flex w-full gap-6">
                                 <ButtonRenderer buttonList={[{
                                     children: <div className="flex items-center gap-2">
-                                        {expandChidReplies ? (
-                                            <Arrow className="rotate-180" />) : (
-                                            <Arrow />
-                                        )}{" "}
+                                        {expandChidReplies ? <Arrow className="rotate-180" /> : <Arrow />}{" "}
                                         Reply
-                                    </div>, type: 'positive', onClick: expandChidReplies ? handleClickCancel : handleNewComment,
+                                    </div>, type: 'positive', onClick: handleNewComment,
                                 },
                                 { children: "Edit", type: "positive", onClick: () => setEditMode(true) },
                                 { children: "Delete", type: "negative", onClick: handleDelete, }]}
