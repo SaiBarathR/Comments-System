@@ -1,3 +1,18 @@
+## Component Preview:
+
+**Basic View:**
+
+![Screenshot 2023-07-31 110146](https://github.com/SaiBarathR/Comments-System/assets/58382813/12b494ff-4437-4ce7-900a-7a2f1e0aa5d2)
+
+**Multi lvl Comments View:**
+
+![Screenshot 2023-07-31 110243](https://github.com/SaiBarathR/Comments-System/assets/58382813/dd0fa65b-eae1-4d3b-949f-0658b6a71823)
+
+**Edit View:**
+
+![Screenshot 2023-07-31 110307](https://github.com/SaiBarathR/Comments-System/assets/58382813/9ac17848-86c6-4c50-b012-9d2b119348b9)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
